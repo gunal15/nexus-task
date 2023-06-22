@@ -5,9 +5,8 @@ import burgerMenuData from "../data/burgerMenuData";
 
 const HomePage = () => {
   const discountImages = [
-    "https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230426015938930569_1440x300gif", // Replace with your discount image URL 1
-    "https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg", // Replace with your discount image URL 2
-    // Add the remaining discount image URLs
+    "https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230426015938930569_1440x300gif",
+    "https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg",
     "https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20221223091239146125_1440x300gif",
     "https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230503125256075747_1440x300gif",
     "https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230307014000870966_1440x300gif",
