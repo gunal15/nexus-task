@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background-color: #f82828;
+  color: #fff;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  display: flex;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.home {
+  padding: 20px;
+}
+
+.discounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s both;
+}
+
+.discount-card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(238, 72, 72);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.discount-card:hover {
+  transform: translateY(-5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.discount-card h2 {
+  margin: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #d20404;
+}
+
+.discount-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #777;
+}
+
+.discount-card:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  opacity: 0.2;
+  border-radius: 15px;
+}
+
+.discount-card:hover:before {
+  opacity: 0.4;
+}
+
+.discount-card .discount-icon {
+  font-size: 48px;
+  color: #ff8800;
+  margin-bottom: 10px;
+}
+
+.discount-card .discount-icon i {
+  vertical-align: middle;
+}
+
+.discount-card .discount-title {
+  font-weight: bold;
+}
+
+.discount-card .discount-description {
+  margin-top: 10px;
+}
+
+.burger-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  animation: fadeInUp 1s both;
+}
+
+.burger-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  animation: fadeInUp 1s both;
+}
+
+.menu {
+  padding: 20px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.menu-item {
+  display: flex;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-details {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.item-details h2, .item-details p {
+  margin: 0 0 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.top-bar {
+  height: 80px;
+  background-color: #8a17fc;
+  color: #fff;
+}
+
+.top-bar nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.nav-link:first-child {
+  margin-right: auto;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.animated {
+  animation-name: fadeInUp;
+}
+
+.animated.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.animated.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.animated.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.animated.delay-4 {
+  animation-delay: 0.8s;
 }
